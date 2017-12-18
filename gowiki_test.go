@@ -20,5 +20,8 @@ var _ = Describe("Gowiki", func() {
 
 	It("has page details", func() {
 		Expect(page.Title).To(Equal("Test"))
+		Expect(page.Body).To(Equal([]byte{'g', 'o', 'l', 'a', 'n', 'g'}))
 	})
+
+	//It("has a file")
 })
