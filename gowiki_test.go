@@ -2,7 +2,7 @@ package main_test
 
 import (
 	. "github.com/onsi/ginkgo"
-	//. "github.com/onsi/gomega"
+	. "github.com/onsi/gomega"
 
 	. "github.com/kellimohr/gowiki"
 )
@@ -16,5 +16,9 @@ var _ = Describe("Gowiki", func() {
 	BeforeEach(func() {
 		page.Title = "Test"
 		page.Body = []byte{'g', 'o', 'l', 'a', 'n', 'g'}
+	})
+
+	It("has page details", func() {
+		Expect(page.Title).To(Equal("Test"))
 	})
 })
